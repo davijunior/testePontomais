@@ -1,4 +1,5 @@
-
+## Davi Martimiano Junior 
+## Cargo Pretendido: Ruby on Rails Developer
 
 class String
     def palindromo?
