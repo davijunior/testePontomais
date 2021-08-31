@@ -1,0 +1,65 @@
+
+
+class String
+    def palindromo?
+      puts(self == self.reverse)
+    end
+
+    def isCpf?
+        pattern = /[0-9]{3}?[\.][0-9]{3}?[\.][0-9]{3}?[\-][0-9]{2}/
+        puts(pattern.match?(self))
+    end
+  end
+
+def fatorial(n)
+    total = 1
+    unless n < 0 
+        while n > 1
+            total *= n
+            n -= 1
+        end
+        puts total
+    else
+        puts nil
+    end
+end
+
+puts "Resulução - 1"
+puts "string 1: 'subinoonibus'"
+puts "string 2: 'PontoMais'"
+str = "subinoonibus"
+str2 = "PontoMais"
+
+str.palindromo?
+str2.palindromo?
+
+##=========================================##
+
+puts "Resulução - 2"
+puts "string 1: '37238438836'"
+puts "string 2: '372.384.388-36'"
+
+cpf1 = "37238438836"
+cpf2 = "372.384.388-36"
+
+cpf1.isCpf?
+cpf2.isCpf?
+
+##============================================##
+
+puts "Resulução - 3"
+fatorial(-1)
+fatorial(0)
+fatorial(2)
+fatorial(3)
+fatorial(4)
+fatorial(10)
+
+
+##==========================================##
+
+puts "Resolução - 4"
+
+puts "SELECT employees.cpf, CONCAT(first_name, ' ', last_name) AS Nome_Completo, teams.name AS 'Time', job_titles.name AS Cargo FROM `employees` INNER JOIN job_titles ON employees.job_title_id = job_titles.id INNER JOIN teams ON employees.team_id = teams.id"
+
+
